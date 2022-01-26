@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.15)
 set(CMAKE_CXX_STANDARD 20)
 
 project(plugin)
-add_library(plugin SHARED main.cpp)
+add_library(plugin SHARED main.cpp impl.cpp natives.cpp)
 
 target_include_directories(plugin PUBLIC sdk)
 target_link_libraries(plugin PUBLIC sdk)
